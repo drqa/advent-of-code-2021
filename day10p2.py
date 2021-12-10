@@ -26,16 +26,6 @@ def valid(line):
 with open("input") as file:
     lines = [x.strip() for x in file]
 
-# Part 1
-corrupted_scores = {")": 3, "]": 57, "}": 1197, ">": 25137}
-score = 0
-for line in lines:
-    res = valid(line)
-    if res != True:
-        score += corrupted_scores[res]
-print(score)
-
-# Part 2
 scores_dict = {")": 1, "]": 2, "}": 3, ">": 4}
 scores = []
 for line in lines:
